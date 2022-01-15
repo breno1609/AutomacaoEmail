@@ -1,0 +1,52 @@
+# 1 Abra uma nova janela no google
+# 2 Escreva na barra de pesquisa https://outlook.live.com/owa/
+# 3 Clique em entrar
+# 4 Escreva o e-mai , no local desejado
+# 5 Pressionar Enter
+# 6 Escrever a senha
+# 7 Pressionar Enter
+# 8 Pressionar Enter
+# 9 Clicar em nova mensagem
+# 10 Escrever para destinatario
+# 11 Clicar em assunto
+# 12 Escrever a mensagem "Testando Automação!"
+# 13 Clicar em Enviar
+
+import pyautogui
+import pyperclip
+import time
+
+#pyperclip.cpy = Copia o link
+
+pyautogui.PAUSE = 3
+
+pyautogui.hotkey("ctrl","t") #ABRIR NOVA ABA
+pyautogui.write("https://outlook.live.com/owa/") #ESCREVE O LINK DO SISTEMA
+pyautogui.press("enter") # Entrando no link
+
+pyautogui.sleep(1)
+pyautogui.click(x=1097, y=123)
+pyautogui.sleep(5)
+pyautogui.write("seu email")
+pyautogui.sleep(5)
+pyautogui.press("enter")
+pyautogui.write("sua senha")
+pyautogui.sleep(5)
+pyautogui.press("enter")
+pyautogui.sleep(5)
+pyautogui.press("enter")
+pyautogui.sleep(20)
+
+pyautogui.click(x=176, y=193)
+pyautogui.sleep(10)
+pyautogui.write("email do destinatario")
+pyautogui.press("enter")
+pyautogui.click(x=396, y=316)
+pyautogui.sleep(5)
+pyautogui.write("Automacão")
+pyautogui.click(x=500, y=410)
+pyautogui.write("Automacão!!")
+pyautogui.click(x=331, y=651)
+
+pyautogui.sleep(5) #Descobrir a localização
+pyautogui.position()
